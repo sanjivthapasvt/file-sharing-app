@@ -28,8 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'api',
     'rest_framework',
+    'rest_framework_simplejwt',
     'corsheaders',
-    'rest_framework_smplejwt',
 ]
 
 REST_FRAMEWORK = {
@@ -149,3 +149,7 @@ CORS_ALLOW_ALL_ORIGINS=True
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000", 
+]
