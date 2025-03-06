@@ -13,14 +13,14 @@ const Navbar = () => {
   const handleHomeClick = (e) => {
     if (!user) {
       e.preventDefault();
-      navigate("/login");
+      navigate("/");
     }
   };
   
   return (
     <nav className="bg-white shadow-md p-4 flex items-center justify-between">
       <Link 
-        to="/" 
+        to="/home" 
         className="text-2xl font-bold text-indigo-600 hover:text-indigo-500 transition-colors"
         onClick={handleHomeClick}
       >

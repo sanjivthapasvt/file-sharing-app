@@ -26,7 +26,7 @@ const Login = () => {
       localStorage.setItem("accessToken", res.data.tokens.access);
       localStorage.setItem("refreshToken", res.data.tokens.refresh);
       localStorage.setItem("user", JSON.stringify({ username }));
-      navigate("/");
+      navigate("/home");
     } catch (err) {
       console.error("Login error:", err.response?.data || err.message);
       setError(err.response?.data?.error || "Login failed. Please check your credentials.");
