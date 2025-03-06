@@ -2,5 +2,5 @@ django
 django-cors-headers
 psycopg2
 djangorestframework
-pip install djangorestframework-simplejwt
+djangorestframework-simplejwt
 python-dotenv
