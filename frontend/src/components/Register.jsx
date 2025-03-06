@@ -7,6 +7,7 @@ const Register = () => {
     password: "",
     confirm_password: ""
   });
+  const apiUrl = import.meta.env.VITE_API_URL;
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
@@ -28,7 +29,7 @@ const Register = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/auth/register/", {
+      const response = await fetch(`${apiUrl}/api/auth/register/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

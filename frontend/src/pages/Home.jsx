@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-
-const API_BASE = "http://localhost:8000/api";
+const apiUrl = import.meta.env.VITE_API_URL;
+const API_BASE = `${apiUrl}/api`;
 
 const FileShare = () => {
   const [files, setFiles] = useState([]);

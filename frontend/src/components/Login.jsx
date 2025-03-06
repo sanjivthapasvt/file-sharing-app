@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 const Login = () => {
+  const apiUrl = import.meta.env.VITE_API_URL;
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -13,7 +14,7 @@ const Login = () => {
     setError("");
     console.log("Attempting login with:", { username });
     try {
-      const res = await axios.post("http://127.0.0.1:8000/api/auth/login/", {
+      const res = await axios.post(`${apiUrl}/api/auth/login/`, {
         username,
         password,
       }, {
