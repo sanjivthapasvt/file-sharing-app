@@ -1,1 +1,1 @@
-Trying to create web app to share files let's see how it goes!!
+You are free to copy the repo and use it on your own.
